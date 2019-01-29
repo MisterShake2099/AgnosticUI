@@ -261,9 +261,9 @@ RectTransform:
   - {fileID: 1398651705}
   - {fileID: 2031105354}
   - {fileID: 478596341}
+  - {fileID: 895559559}
   - {fileID: 890183451}
   - {fileID: 329195926}
-  - {fileID: 895559559}
   - {fileID: 64164535}
   - {fileID: 548936478}
   - {fileID: 417868323}
@@ -388,7 +388,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -629,7 +629,7 @@ RectTransform:
   - {fileID: 1187722888}
   - {fileID: 1832070868}
   m_Father: {fileID: 81110708}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -1265,7 +1265,8 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1485490721}
-          m_ObjectArgumentAssemblyTypeName: DevName.UI.UI_Screen, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: ColdPants.AgnosticUI.AgnosticUI_Screen,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1547,7 +1548,8 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 81110711}
-          m_ObjectArgumentAssemblyTypeName: DevName.UI.UI_Screen, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: ColdPants.AgnosticUI.AgnosticUI_Screen,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1828,7 +1830,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 847938066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1015188221}
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1485490721}
+          m_ObjectArgumentAssemblyTypeName: ColdPants.AgnosticUI.AgnosticUI_Screen,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &847938066
@@ -1927,7 +1941,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2094,7 +2108,7 @@ RectTransform:
   - {fileID: 1001115634}
   - {fileID: 261654289}
   m_Father: {fileID: 81110708}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -2207,7 +2221,7 @@ RectTransform:
   - {fileID: 1463030989}
   - {fileID: 1887514754}
   m_Father: {fileID: 81110708}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -2298,7 +2312,7 @@ GameObject:
   - component: {fileID: 978278489}
   - component: {fileID: 978278488}
   m_Layer: 0
-  m_Name: Fader
+  m_Name: Transition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2558,13 +2572,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b7604bb64ef1845be3887b17d9cdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultScreen: {fileID: 0}
+  DefaultScreen: {fileID: 1830827504}
   OnScreenSwitch:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  TransitionImage: {fileID: 0}
+  TransitionImage: {fileID: 978278488}
   TransitionInDuration: 1
   TransitionOutDuration: 1
 --- !u!1 &1047997832
@@ -2742,68 +2756,56 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 487408482777401228, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880356, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_Name
       value: AgnosticUI
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 751049345596745763, guid: d17e6e5f4fa6a334890a3c2ef4039914,
-        type: 3}
+    - target: {fileID: 1292880358, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d17e6e5f4fa6a334890a3c2ef4039914, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ddfb4c057d7ddda45af40468455ecad7, type: 3}
 --- !u!1 &1187722887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,7 +3043,8 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1830827504}
-          m_ObjectArgumentAssemblyTypeName: DevName.UI.UI_Screen, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: ColdPants.AgnosticUI.AgnosticUI_Screen,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3323,10 +3326,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1485490720}
   - component: {fileID: 1485490725}
+  - component: {fileID: 1485490721}
   - component: {fileID: 1485490724}
   - component: {fileID: 1485490723}
   - component: {fileID: 1485490722}
-  - component: {fileID: 1485490721}
   m_Layer: 0
   m_Name: WaitScreen
   m_TagString: Untagged
@@ -3387,7 +3390,8 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1830827504}
-          m_ObjectArgumentAssemblyTypeName: DevName.UI.UI_Screen, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: ColdPants.AgnosticUI.AgnosticUI_Screen,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4901,7 +4905,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: TEXT
+  m_Text: WAIT
 --- !u!222 &2054161691
 CanvasRenderer:
   m_ObjectHideFlags: 0
