@@ -3,37 +3,36 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace DevName.UI
+namespace ColdPants.AgnosticUI
 {
 	[RequireComponent(typeof(Animator))]
 	[RequireComponent(typeof(CanvasGroup))]
-	public class UI_Screen : MonoBehaviour
+	public class AgnosticUI_Screen : MonoBehaviour
 	{
-		#region Variables
 		[Header("Main Properties")]
-		public Selectable m_StartSelectable;
+		public Selectable StartSelectable;
 
 		[Header("Screen Events")]
 		public UnityEvent OnScreenStart = new UnityEvent();
 		public UnityEvent OnScreenClose = new UnityEvent();
 
 		private Animator animator;
-		#endregion
 
-		#region Main Methods
+
+		#region Main
 		private void Start()
 		{
 			animator = GetComponent<Animator>();
 
 			// Make assigned Selectable "selected" on startup.
-			if (m_StartSelectable)
+			if (StartSelectable)
 			{
-				EventSystem.current.SetSelectedGameObject(m_StartSelectable.gameObject);
+				EventSystem.current.SetSelectedGameObject(StartSelectable.gameObject);
 			}
 		}
 		#endregion
 
-		#region Helper Methods
+		#region Helpers
 		public virtual void StartScreen()
 		{
 			if (OnScreenStart != null)
