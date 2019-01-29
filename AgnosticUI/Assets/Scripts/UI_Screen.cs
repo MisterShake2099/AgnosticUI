@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace DevName.UI
 {
@@ -43,7 +41,7 @@ namespace DevName.UI
 				OnScreenStart.Invoke();
 			}
 
-			HandleAnimator("show");
+			HandleAnimator("Show");
 		}
 
 		public virtual void CloseScreen()
@@ -53,7 +51,7 @@ namespace DevName.UI
 				OnScreenClose.Invoke();
 			}
 
-			HandleAnimator("hide");
+			HandleAnimator("Hide");
 		}
 
 		void HandleAnimator(string trigger)
