@@ -60,9 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\AgnosticUI_Screen.cs" />
-    <Compile Include="Assets\Script\AgnosticUI_System.cs" />
-    <Compile Include="Assets\Script\AgnosticUI_TimedScreen.cs" />
+    <Compile Include="Assets\Script\AgnosticUI\AgnosticUI_Screen.cs" />
+    <Compile Include="Assets\Script\AgnosticUI\AgnosticUI_System.cs" />
+    <Compile Include="Assets\Script\AgnosticUI\AgnosticUI_TimedScreen.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Y:/Workspace/AgnosticUI/AgnosticUI/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
