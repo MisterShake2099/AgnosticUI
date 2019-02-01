@@ -45,7 +45,7 @@ namespace ColdPants.AgnosticUI
 		#endregion
 
 		#region Helpers
-		private void InitializeScreens()
+		void InitializeScreens()
 		{
 			foreach (Component screen in screens)
 			{
