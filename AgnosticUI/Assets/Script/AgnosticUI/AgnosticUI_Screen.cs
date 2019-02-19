@@ -20,7 +20,7 @@ namespace ColdPants.AgnosticUI
 
 
 		#region Main
-		private void Start()
+		private void Awake()
 		{
 			animator = GetComponent<Animator>();
 
