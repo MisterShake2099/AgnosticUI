@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ColdPants.AgnosticUI
+namespace UnityTools.AgnosticUI
 {
 	public class AgnosticUI_TimedScreen : AgnosticUI_Screen
 	{

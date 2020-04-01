@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace ColdPants.AgnosticUI
+namespace UnityTools.AgnosticUI
 {
 	public class AgnosticUI_System : MonoBehaviour
 	{

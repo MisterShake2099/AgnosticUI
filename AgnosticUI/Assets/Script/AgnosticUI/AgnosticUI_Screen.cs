@@ -3,7 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace ColdPants.AgnosticUI
+namespace UnityTools.AgnosticUI
 {
 	[RequireComponent(typeof(Animator))]
 	[RequireComponent(typeof(CanvasGroup))]
@@ -61,5 +61,6 @@ namespace ColdPants.AgnosticUI
 			}
 		}
 		#endregion
+
 	}
 }
