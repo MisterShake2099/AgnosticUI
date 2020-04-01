@@ -18,11 +18,18 @@ namespace UnityTools.AgnosticUI
 		public float TransitionInDuration = 1f;
 		public float TransitionOutDuration = 1f;
 
-		public AgnosticUI_Screen CurrentScreen { get; private set; }
-		public AgnosticUI_Screen PreviousScreen { get; private set; }
+		public AgnosticUI_Screen CurrentScreen
+		{
+			get;
+			private set;
+		}
+		public AgnosticUI_Screen PreviousScreen
+		{
+			get;
+			private set;
+		}
 
 		private Component[] screens = new Component[0];
-
 
 		#region Main
 		private void Start()
